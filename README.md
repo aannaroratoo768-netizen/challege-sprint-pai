@@ -15,9 +15,9 @@ GoodWe: a GoodWe é uma empresa global de tecnologia, líder mundial na fabrica�
 
 5. ## Arquitetura tecnológica: *Framework de Orquestração: LangChain (Python):* Utilizado para gerenciar o histórico de conversas (memória), estruturar os prompts e facilitar a futura integração com APIs reais da GoodWe (via LangChain Tools/Agents) na Sprint 2 
 
-6. ## Fluxograma: desenhar o fluxograma na *figma*.
-7. 
-8. [ Usuário (Síndico) ] 
+6. ## Fluxograma ---> link do fluxograma: https://www.figma.com/board/NnzCxkTqZsGp2Nu6uQGe8O/Sprint1-PAI?node-id=0-1&t=L1FkkMtVQSmZHqlO-1
+
+ [ Usuário (Síndico) ] 
        │
        ▼ (Pergunta em linguagem natural)
 [ Backend Python (LangChain) ] ──(Injeta o System Prompt + Contexto do Condomínio)
