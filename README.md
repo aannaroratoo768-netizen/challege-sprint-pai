@@ -3,7 +3,10 @@ challenge sprint - prompt &amp; artificial intelligence - equipe 03
 
 ## integrantes da equipe 03: Wendel Pedro Rezende - RM: 573126 / Victor Hugo Lavaqui - RM: 573838 / Daniel Pupo Martinez - RM: 573075 / Arthur Araujo Massarioli - RM: 573308 / Beatriz da Silva Araújo - RM: 570619  / Anna Karla Rorato Albino - RM: 569604
 
-## Problema: aumento de veículos elétricos (EVs), os condomínios enfrentam sérios desafios na gestão de eletropostos compartilhados. Sem uma inteligência centralizada, surgem três problemas críticos 
+## Contextualização
+GoodWe: a GoodWe é uma empresa global de tecnologia, líder mundial na fabricação de inversores fotovoltaicos (solares) e soluções de armazenamento de energia. A marca desenvolve equipamentos para projetos residenciais, comerciais, industriais e agronegócio, convertendo a luz do sol em eletricidade e gerenciando baterias.
+
+## O problema: aumento de veículos elétricos (EVs), os condomínios enfrentam sérios desafios na gestão de eletropostos compartilhados. Sem uma inteligência centralizada, surgem três problemas críticos 
 1. *sobrecarga da rede:* Risco de ultrapassar a demanda contratada do condomínio se múltiplos carros carregarem simultaneamente.
 2. *injustiça na cobrança:* Dificuldade em registrar ciclos exatos de recarga por morador para um faturamento individualizado justo.
 3. *atrito na reserva:* Falta de orquestração no uso compartilhado das vagas com carregadores.
