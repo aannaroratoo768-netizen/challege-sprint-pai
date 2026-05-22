@@ -13,7 +13,7 @@ Com o aumento de veículos elétricos (EVs), os condomínios enfrentam sérios d
 3. *atrito na reserva:* Falta de orquestração no uso compartilhado das vagas com carregadores.
 
 ## Proposta: desenvolver um chatbot inteligente GoodWe
-Arquitetura tecnológica: *Framework de Orquestração: LangChain (Python):* Utilizado para gerenciar o histórico de conversas (memória), estruturar os prompts e facilitar a futura integração com APIs reais da GoodWe (via LangChain Tools/Agents)
+Arquitetura tecnológica: *Framework de Orquestração: LangChain (Python):* Utilizado para gerenciar o histórico de conversas (memória), estruturar os prompts e facilitar a futura integração com APIs reais da GoodWe (via LangChain Tools/Agents).
 
 
 ## Justificativa Técnica:
@@ -26,12 +26,27 @@ As principais funções do LangChain incluem:
 
 
 ## Pequeno contexto:
-GoodWe: a GoodWe é uma empresa global de tecnologia, líder mundial na fabricação de inversores fotovoltaicos (solares) e soluções de armazenamento de energia. A marca desenvolve equipamentos para projetos residenciais, comerciais, industriais e agronegócio, convertendo a luz do sol em eletricidade e gerenciando baterias.
+GoodWe:
+a GoodWe é uma empresa global de tecnologia, líder mundial na fabricação de inversores fotovoltaicos (solares) e soluções de armazenamento de energia. A marca desenvolve equipamentos para projetos residenciais, comerciais, industriais e agronegócio, convertendo a luz do sol em eletricidade e gerenciando baterias.
+O portfólio da marca inclui principalmente:
+1. Inversores On-Grid: Convertem a energia dos painéis solares para uso imediato e injetam o excedente na rede elétrica.
+2. Inversores Híbridos: Gerenciam tanto os painéis solares quanto baterias, garantindo energia ininterrupta mesmo em quedas de rede (sistema backup).
+3. Baterias Inteligentes: Soluções próprias para armazenamento e autonomia energética.A marca destaca-se pela alta eficiência e possui forte presença no mercado brasileiro, sendo amplamente recomendada por especialistas e distribuída por empresas como Solfácil, Aldo Solar e Fotus.
+
+O que a GoodWe faz?
+a GoodWe é uma empresa fabricante líder mundial de inversores fotovoltaicos ("cérebro" do sistema de energia solar).
+Incluem:
+1. Inversores Solares (On-Grid e Off-Grid): São o "cérebro" do sistema. Eles transformam a corrente contínua gerada pelo sol em corrente alternada (pronta para uso nos eletrodomésticos). A GoodWe possui linhas de microinversores, inversores on-grid e off-grid para locais remotos.
+2. Armazenamento Híbrido: A marca é pioneira em inversores híbridos, que gerenciam tanto a energia dos painéis quanto a carga e descarga de baterias.
+3. Função Backup (UPS): Na falta de energia da rede pública, o sistema comuta instantaneamente para as baterias, mantendo os equipamentos ligados sem interrupções.
+4. Gestão Inteligente (Load Shifting): Permite armazenar energia solar durante o dia para usá-la à noite ou nos horários de pico da rede, reduzindo custos na conta de luz.
+
+fonte: https://de.goodwe.com/images/download/GW_EM_Manual%20Do%20Usuario-PT.pdf
 
 
 ## Fluxograma ---> link do fluxograma: [https://www.figma.com/board/NnzCxkTqZsGp2Nu6uQGe8O/Sprint1-PAI?node-id=0-1&t=L1FkkMtVQSmZHqlO-1](https://www.figma.com/board/NnzCxkTqZsGp2Nu6uQGe8O/Sprint1-PAI?node-id=0-1&t=K2qih9anm7fHgomL-1)
 
-estrutura pensada:
+estrutura base pensada:
 
  [ Usuário (Síndico) ] 
        │
@@ -51,10 +66,10 @@ estrutura pensada:
 ## System Prompt
 Você é o "GoodWe ChargeOps Specialist", um assistente virtual inteligente e altamente especializado na gestão de eletropostos GoodWe para condomínios residenciais. Seu objetivo é auxiliar síndicos e administradores prediais a operar o sistema de forma eficiente.
 
-*diretrizes funamentais:* você entende de orquestração de potência (Dynamic Load Balancing), ciclos de recarga, faturamento por kWh e agendamento de recargas.
-*tom de voz:* tom de voz profissional, que passe uma impressão cofiante, técnico porém acessível, focado em solução de problemas e segurança elétrica.
-*limitações:* se o usuário perguntar algo fora do ecossistema de carregamento GoodWe ou gestão de condomínios, recuse a resposta gentilmente, direcionando-o de volta ao foco.
-*regra de negócio(orquestração):* lembre sempre o síndico que o limite de potência simultânea do condomínio é de 44 kW. Se houver mais de 6 carros conectados, o sistema ativará o carregamento em fila ou reduzirá a corrente de cada um para 7.4 kW.
+*Diretrizes fundamentais:* você entende de orquestração de potência (Dynamic Load Balancing), ciclos de recarga, faturamento por kWh e agendamento de recargas.
+*Tom de voz:* tom de voz profissional, que passe uma impressão cofiante, técnico porém acessível, focado em solução de problemas e segurança elétrica.
+*Limitações:* se o usuário perguntar algo fora do ecossistema de carregamento GoodWe ou gestão de condomínios, recuse a resposta gentilmente, direcionando-o de volta ao foco.
+*Regra de negócio(orquestração):* lembre sempre o síndico que o limite de potência simultânea do condomínio é de 44 kW. Se houver mais de 6 carros conectados, o sistema ativará o carregamento em fila ou reduzirá a corrente de cada um para 7.4 kW.
 
 
 ## Perguntas e respostas base para o Chatbot:
